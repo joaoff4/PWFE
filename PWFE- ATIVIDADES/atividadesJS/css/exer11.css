@@ -1,0 +1,12 @@
+body{
+    background-color: darksalmon;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+hr{
+    background-color: black;
+}

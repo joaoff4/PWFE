@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="meuCanvas" width="400" height="400"></canvas>
+
+    <style>
+        body{
+            background-color: darkslateblue;
+        }
+    </style>
+
+    <script>
+        var canvas = document.getElementById("meuCanvas");
+        var ctx = canvas.getContext("2d");
+        var x = canvas.width / 2;
+        var y = canvas.height / 2;
+        var raio = 50;
+        var velX = 0;
+        var velY = 2;
+
+        function circulo(){
+            //"limpando" o canvas
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            ctx.fillStyle = "gold";
+            ctx.beginPath();
+            ctx.arc(x, y, raio, 0, Math.PI*2);
+            //preenchendo o círculo
+            ctx.fill();
+            //movimentando-se na tela
+            x += velX;
+            y += velY;
+            //invertendo a direção
+            if(x + raio > canvas.width || x - raio < 0){
+                velX =- velX;
+            }
+            if(y + raio > canvas.height || y + raio < 0){
+                velY =- velY;
+            }
+            requestAnimationFrame(circulo);
+        }
+        circulo();
+    </script>
+</body>
+</html>

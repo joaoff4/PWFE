@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/exer9.css">
+    <title>Atv9</title>
+</head>
+<body>
+    <center>
+        <div id="div"></div>
+        <div class="div">
+            <h1>Adicionar Produtos na Lista</h1>
+            <label for="nome-produto"><b>Nome do produto</b></label>
+            <input type="text" id="nome-produto" name="nome-produto">
+            <br><label for="preco-produto"><b>Preço Produto</b></label>
+            <input type="number" id="preco-produto" name="preco-produto">
+            <button onclick="adicionarProduto()"><b>adicionar Produto</b></button>
+            <!--nossa lista de produtos-->
+            <h2>Lista de Produtos</h2>
+            <ul id="lista-produtos">
+                <!--aqui serão criados os itens da lista-->
+            </ul>
+            <!--editar campos-->
+            <h2>Editar dados da Lista</h2>
+            <label for="editar-nome-produto"><b>Editar Nome Produto</b></label>
+            <input type="text" id="editar-nome-produto" name="editar-nome-produto"><br>
+            <label for="editar-preco-produto"><b>Editar Preço Produto</b></label>
+            <input type="number" id="editar-preco-produto" name="editar-preco-produto"><br>
+            <button onclick="atualizarProduto()"><b>atualizar Produto</b></button>
+            <!--excluir produtos-->
+            <h2>Excluir dados da Lista</h2>
+            <select id="excluir-produto"></select>
+            <button onclick="excluirProduto()"><b>excluir Produto</b></button>
+            <script src="js/exer9.js"></script>
+        </div>
+    </center>
+</body>
+</html>

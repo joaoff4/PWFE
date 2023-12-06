@@ -1,0 +1,10 @@
+body{
+    background-color: darkslateblue;
+    font-size: 21px;
+}
+button{
+    border-radius: 10px;
+    border-style:dashed;
+    font-size: 17px;
+    background-color: #6f62c3 ;
+}

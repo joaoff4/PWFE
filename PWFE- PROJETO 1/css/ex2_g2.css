@@ -1,0 +1,14 @@
+body{
+    background-color: darksalmon;
+    font-size: 21px;
+}
+input{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+}
+button{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+}

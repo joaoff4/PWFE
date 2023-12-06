@@ -1,0 +1,16 @@
+body{
+    background-color: darksalmon;
+}
+input{
+    border-radius: 5px;
+    border-style: none;
+    background-color: aliceblue;
+}
+button{
+    border-radius: 5px;
+    border-style: none;
+}
+div{
+    
+    border-style: solid;
+}

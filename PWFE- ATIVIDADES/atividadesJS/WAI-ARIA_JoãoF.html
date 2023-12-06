@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAI-ARIA</title>
+</head>
+<body>
+    <label>Selecione um doce:</label>
+    <select name="selected" id="produtos" aria-label="selecionar_produto">
+        <option value="p1">Pudim</option>
+        <option value="p2" selected>Brigadeiro</option>
+        <option value="p3">Olho de Sogra</option>
+    </select>
+    <p id="demo">Descrição da massa: </p>
+<style>
+    body{
+        background-color: darksalmon;
+    }
+    [aria-label]{
+        border: 2px solid rgb(26, 155, 194);
+        color: rgb(26, 155, 194);
+    }
+</style>
+<script>
+    const produtos = document.getElementById("produtos");
+    produtos.addEventListener("change", () =>{
+        produtos.getAttribute("aria-label") === "true";
+        if(produtos == "p1"){
+            document.getElementById("demo").innerHTML += "sobremesa de consistência cremosa, à base de chocolate, frutas etc., preparada com leite, leite condensado e ovos e assada ou cozida em banho-maria em calda de açúcar queimado.";
+        }else if(produtos == "p2"){
+            document.getElementById("demo").innerHTML += "doce feito com leite condensado e chocolate, ger. sob a forma de bolinhas cobertas de chocolate granulado.";
+        }else if(produtos == "p3"){
+            document.getElementById("demo").innerHTML += "doce preparado com coco, gemas e açúcar, finalizado com ameixa preta nos dois lados, no formato amendoado de um olho.";
+        }
+    });
+</script>
+</body>
+</html>

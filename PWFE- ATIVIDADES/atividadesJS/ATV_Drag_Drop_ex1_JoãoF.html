@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag-Drop</title>
+<style>
+body{
+    background-color: rgb(241, 137, 9);
+}
+#div1 {
+  width: 105px;
+  height: 80px;
+  padding: 10px;
+  border: 5px dashed black;
+  border-radius: 50px;
+}
+img{
+    border-radius: 50px;
+}
+</style>
+</head>
+<body>
+    <center>
+        <h1>Escolha dois dos esportes que você mais gosta:</h1>  
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><b>1º</b></div>
+        <br>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><b>2º</b></div>
+        <br>
+    </center>
+    <img id="drag1" src="img/bola-de-voleibol-1.png" draggable="true" ondragstart="drag(event)" width="70" height="69">
+    <img id="drag2" src="img/soccer-ball.png" draggable="true" ondragstart="drag(event)" width="70" height="69">
+    <img id="drag3" src="img/basketball-ball.png" draggable="true" ondragstart="drag(event)" width="80" height="79">
+    <img id="drag4" src="img/image_processin.png" draggable="true" ondragstart="drag(event)" width="70" height="69">
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+</html>
